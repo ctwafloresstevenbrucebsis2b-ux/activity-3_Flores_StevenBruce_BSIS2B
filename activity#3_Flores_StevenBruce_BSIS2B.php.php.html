@@ -1,0 +1,50 @@
+<?php
+
+// Grades of 5 subjects
+$flores_subject1 = 85;
+$flores_subject2 = 88;
+$flores_subject3 = 90;
+$flores_subject4 = 86;
+$flores_subject5 = 86;
+
+// Calculate average
+$flores_average = (
+    $flores_subject1 +
+    $flores_subject2 +
+    $flores_subject3 +
+    $flores_subject4 +
+    $flores_subject5
+) / 5;
+
+// Determine Passed or Failed
+if ($flores_average >= 74.5) {
+    $flores_remarks = "Passed";
+} else {
+    $flores_remarks = "Failed";
+}
+
+// Determine letter grade
+if ($flores_average >= 90) {
+    $flores_letter_grade = "A";
+} elseif ($flores_average >= 80) {
+    $flores_letter_grade = "B";
+} elseif ($flores_average >= 70) {
+    $flores_letter_grade = "C";
+} elseif ($flores_average >= 60) {
+    $flores_letter_grade = "D";
+} else {
+    $flores_letter_grade = "F";
+}
+
+// Output
+echo "Subject 1: $flores_subject1<br>";
+echo "Subject 2: $flores_subject2<br>";
+echo "Subject 3: $flores_subject3<br>";
+echo "Subject 4: $flores_subject4<br>";
+echo "Subject 5: $flores_subject5<br><br>";
+
+echo "Average: " . $flores_average . "<br>";
+echo "Remarks: " . $flores_remarks . "<br>";
+echo "Letter Grade: " . $flores_letter_grade;
+
+?>
